@@ -132,7 +132,7 @@ public class NewBingGoGoServer extends NanoWSD {
         if(url.equals("/sydney/ChatHub")){
             System.out.println(ip+":创建魔法聊天连接");
             Map<String,String> httpHeaders = new HashMap<>();
-            String[] b = {"Accept-Language","Accept-Encoding"};//保留请求头
+            String[] b = {"Accept-Language","Accept-Encoding", "Connection", "Upgrade"};//保留请求头
             Map<String, String> header = handshake.getHeaders();
             for (String s : b) {
                 String v = header.get(s.toLowerCase());
